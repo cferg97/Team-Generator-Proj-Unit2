@@ -107,13 +107,14 @@ li{
 
 #right-side{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 12vh;
     width: 40vw;
     margin-left: 5vw;
 }
 
-#card-body{
+.card-body{
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -121,9 +122,10 @@ li{
     margin-right: 40px;
     border-radius: 5px;
     background-color: white;
+    margin-bottom: 20px;
 }
 
-#card-body > p{
+.card-body > p{
     line-height: 50px;
     margin-left: 20px;
     margin-right: 20px;

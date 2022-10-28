@@ -1,5 +1,6 @@
 let count = 1
 const totalCount = document.getElementById("counter")
+
 let arrayOfNames = []
 
 
@@ -18,21 +19,33 @@ document.getElementById("add").onclick = function () {
 document.getElementById("plus").onclick = function () {
     count++
     totalCount.innerHTML = count
+
+    let div = document.createElement("div")
+    div.classList.add("card")
+    div.classList.add("card-body")
+
+    document.getElementById("right-side").appendChild(div)
+
 }
 
 document.getElementById("minus").onclick = function () {
-    if (count === 0){
+    if (count === 1){
         return;
     }
     else{
     count--
     totalCount.innerHTML = count
+    let parentNode = document.getElementById("right-side")
+    parentNode.removeChild(parentNode.lastChild)
     }
 }
 
 
 document.getElementById("assign").onclick = function () {
     let list = document.getElementById("list")
+    for (i of list){
+        arrayOfNames.push(i)
+    }
     
 }
 
