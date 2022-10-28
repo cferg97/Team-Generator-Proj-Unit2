@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Generator</title>
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
@@ -24,8 +24,11 @@
                     <input id="member" type="text" placeholder="add a name" />
                     <input id="add" class="hover" type="button" value="Add" />
                 </form>
-                
-                <input id = "minus" class = "addminus hover" type="button" value="-" /> <span id="counter">1</span> <input id="plus" class = "addminus hover" type="button" value="+" />
+
+                <div id="increment">
+                    <input id="minus" class="addminus hover" type="button" value="-" /> <span id="counter">1</span>
+                    <input id="plus" class="addminus hover" type="button" value="+" />
+                </div>
             </div>
 
 
@@ -41,12 +44,13 @@
         </div>
 
         <div id="right-side">
-            <div class="card">
+            <div id="card-1" class="card">
                 <div class="card-body">
+                    <h2>Team 1</h2>
                 </div>
-                
-            </div> 
-            
+
+            </div>
+
         </div>
     </div>
 
