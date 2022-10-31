@@ -1,9 +1,9 @@
 let count = 1
 const totalCount = document.getElementById("counter")
 const cardContainer = document.getElementById("right-side")
+const teamQueue = document.querySelector("#list-obj")
 let arrayOfNames = []
 let nameContainer = []
-
 
 document.getElementById("add").onclick = function () {
     let text = document.getElementById("member").value 
@@ -21,6 +21,7 @@ document.getElementById("add").onclick = function () {
 document.getElementById("plus").onclick = function () {
     count++
     totalCount.innerHTML = count
+    
 
     let div = document.createElement("div")
     div.classList.add("card")
@@ -29,7 +30,8 @@ document.getElementById("plus").onclick = function () {
     document.getElementById("right-side").appendChild(div)
     div.id = "team" + count
 
-    div.insertAdjacentHTML("afterbegin","<h2>" + "Team " + count + "</h2")
+    // div.insertAdjacentHTML("afterbegin","<h2>" + "Team " + count + "</h2")
+    div.innerHTML = "<h2>" + "Team " + count + "</h2>" 
 
 }
 
@@ -47,20 +49,18 @@ document.getElementById("minus").onclick = function () {
 
 
 document.getElementById("assign").onclick = function () {
-    randomiseList()
+    const ul = document.querySelector("#list-obj")
+    const newName = ul.lastElementChild
+    newName.classList.add("new-names")
+    const cards = document.querySelectorAll(".card-body ul")
 
-
+    for (let i=0; i < (Math.random()* cards.length); i++){
+        cards[i].appendChild(newName)
+    }
 }
 
 document.getElementById("reset").onclick = function() {
     location.reload();
     return false;
-}
-
-
-function randomiseList () {
-    let random = arrayOfNames.sort(() => Math.random() - 0.5)
-
-    
 }
 
