@@ -1,7 +1,7 @@
 let count = 1
 const totalCount = document.getElementById("counter")
 const cardContainer = document.getElementById("right-side")
-const teamQueue = document.querySelector("#list-obj")
+const teamQueue = document.querySelector("#list-obj > ul")
 let arrayOfNames = []
 let nameContainer = []
 
